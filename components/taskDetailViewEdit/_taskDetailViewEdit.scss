@@ -1,0 +1,33 @@
+.taskDetailViewCardEdit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  max-height: 95%;
+  max-width: 525px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0px 20px 20px 20px;
+  border-radius: 30px;
+  overflow-y: auto;
+
+  @import "./header.scss";
+
+  @import "./titleContainer.scss";
+
+  @import "./descriptionContainer.scss";
+
+  @import "./dueDateContainer.scss";
+
+  @import "./priorityContainer.scss";
+
+  @import "./assignedToContainer.scss";
+
+  @import "./currentAssignation.scss";
+
+  @import "./contactsToAssign.scss";
+
+  @import "./addSubtaskContainer.scss";
+
+  @import "./addTaskBottomContainer.scss";
+}

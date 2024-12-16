@@ -1,0 +1,383 @@
+.contactModal {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.addContactContainer {
+  position: absolute;
+  top: 50%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease-in-out;
+  width: 1212px;
+  height: 592px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+
+  @media (max-width: $breakpoint-lg) {
+    height: 80%;
+    max-height: 760px;
+    width: 100%;
+    max-width: 396px;
+    flex-direction: column;
+  }
+
+  @media (max-width: $breakpoint-xs) and (max-height: 950px) {
+    height: 70%;
+    max-height: 760px;
+    width: 100%;
+    max-width: 396px;
+    flex-direction: column;
+  }
+
+  .modalLogo {
+    z-index: 1;
+    position: absolute;
+    top: 150px;
+    left: 48px;
+    height: 66.48px;
+    width: 55.6px;
+
+    @media (max-width: $breakpoint-lg) {
+      display: none;
+    }
+  }
+
+  .closeModal {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    position: absolute;
+    top: 48px;
+    left: 1132px;
+    z-index: 500;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      top: 24px;
+      left: calc(100% - 56px);
+      filter: invert(100%) brightness(200%);
+
+      &:hover {
+        background: none;
+      }
+    }
+  }
+}
+
+.addContactContainerLeft {
+  max-width: 467px;
+  height: 100%;
+  padding: 66px 48px;
+  background-color: #2a3647;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  position: relative;
+
+  @media (max-width: $breakpoint-lg) {
+    width: 100%;
+    max-height: 352px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 30px;
+    padding: 66px 24px;
+  }
+
+  @media (max-width: $breakpoint-xs) and (max-height: 950px) {
+    width: 100%;
+    max-height: 310px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 30px;
+    padding: 48px 16px;
+  }
+
+  .newUserLogo {
+    width: 126px;
+    height: 126px;
+    border-radius: 63px;
+    position: absolute;
+    top: 204px;
+    left: 550px;
+    color: white;
+    font-size: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      font-size: 47px;
+      margin: 0;
+    }
+
+    @media (max-width: $breakpoint-lg) {
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: $breakpoint-xs) and (max-height: 950px) {
+      height: 100px;
+      width: 100px;
+      border-radius: 50px;
+    }
+  }
+
+  h1 {
+    font-size: 61px;
+    font-weight: 700;
+
+    @media (max-width: $breakpoint-lg) {
+      font-size: 47px;
+    }
+
+    @media (max-width: $breakpoint-xs) and (max-height: 950px) {
+      font-size: 32px;
+    }
+  }
+
+  span {
+    font-size: 27px;
+    margin-bottom: 10px;
+
+    @media (max-width: $breakpoint-lg) {
+      font-size: 20px;
+    }
+
+    @media (max-width: $breakpoint-xs) and (max-height: 950px) {
+      font-size: 16px;
+    }
+  }
+
+  .vector {
+    width: 90px;
+    height: 2px;
+    background-color: #29abe2;
+    margin-top: 12px;
+  }
+}
+
+.userInitialsBorder {
+  border: 3px solid white;
+}
+
+.addContactContainerRight {
+  width: 745px;
+  height: 100%;
+  padding: 66px 48px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  @media (max-width: $breakpoint-lg) {
+    width: 100%;
+    align-items: center;
+    padding: 66px 24px;
+  }
+
+  @media (max-width: $breakpoint-xs) and (max-height: 950px) {
+    padding: 48px 16px;
+  }
+
+  .modalInputsContainer {
+    width: 422px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $breakpoint-lg) {
+      width: 100%;
+      margin-top: 24px;
+    }
+
+    @media (max-width: $breakpoint-xs) and (max-height: 950px) {
+      margin-top: 18px;
+    }
+
+    p {
+      color: red;
+      font-size: 12px;
+      margin-top: 2px;
+      margin-bottom: 4px;
+
+      @media (max-width: $breakpoint-xs) and (max-height: 950px) {
+        font-size: 8px;
+        margin-top: 1px;
+        margin-bottom: 2px;
+      }
+    }
+
+    input {
+      height: 50px;
+      border: 1px solid #d1d1d1;
+      border-radius: 10px;
+      padding: 13px 21px;
+      font-size: 20px;
+      background-position: 95%;
+      background-repeat: no-repeat;
+
+      @media (max-width: $breakpoint-lg) {
+        height: 41px;
+      }
+
+      @media (max-width: $breakpoint-xs) and (max-height: 950px) {
+        height: 32px;
+        font-size: 16px;
+        padding: 10px 16px;
+      }
+    }
+
+    // input::-webkit-autofill {
+    //   background: transparent !important;
+    // }
+
+    input[type="text"] {
+      background-image: url("./assets/icons/inputName.svg");
+    }
+
+    input[type="email"] {
+      background-image: url("./assets/icons/inputEmail.svg");
+    }
+
+    input[type="tel"] {
+      background-image: url("./assets/icons/inputTel.svg");
+    }
+  }
+
+  .modalInputsBtnContainer {
+    max-width: 422px;
+    display: flex;
+
+    @media (max-width: $breakpoint-lg) {
+      justify-content: center;
+    }
+
+    .cancelBtn {
+      gap: 4px;
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid #2a3647;
+      background-color: white;
+      font-size: 20px;
+      font-weight: 400;
+      color: #2a3647;
+      margin-right: 24px;
+      transition: all 0.1s ease-in-out;
+
+      @media (max-width: $breakpoint-lg) {
+        display: none;
+      }
+
+      &:hover {
+        border: 1px solid #29abe2;
+        color: #29abe2;
+        box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+
+        img {
+          filter: invert(46%) sepia(52%) saturate(2400%) hue-rotate(163deg) brightness(95%) contrast(101%);
+        }
+      }
+    }
+
+    .createBtn {
+      gap: 4px;
+      padding: 16px;
+      border: none;
+      border-radius: 10px;
+      background-color: #2a3647;
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        background-color: #29abe2;
+        box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+      }
+
+      @media (max-width: $breakpoint-xs) and (max-height: 950px) {
+        font-size: 16px;
+        padding: 10px 14px;
+      }
+    }
+  }
+}
+
+.editDeleteBtn {
+  gap: 4px;
+  padding: 15px 24px;
+  border-radius: 10px;
+  border: 1px solid #2a3647;
+  background-color: white;
+  font-size: 20px;
+  font-weight: 400;
+  color: #2a3647;
+  margin-right: 24px;
+  transition: all 0.1s ease-in-out;
+
+  @media (max-width: $breakpoint-lg) {
+    padding: 18px 10px;
+  }
+
+  @media (max-width: $breakpoint-xs) and (max-height: 950px) {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+
+  &:hover {
+    border: 1px solid #29abe2;
+    color: #29abe2;
+    box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+
+    img {
+      filter: invert(46%) sepia(52%) saturate(2400%) hue-rotate(163deg) brightness(95%) contrast(101%);
+    }
+  }
+}
+
+.editSaveBtn {
+  gap: 4px;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2a3647;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  transition: all 0.1s ease-in-out;
+
+  @media (max-width: $breakpoint-lg) {
+    padding: 18px 10px;
+  }
+
+  @media (max-width: $breakpoint-xs) and (max-height: 950px) {
+    font-size: 16px;
+    padding: 10px 14px;
+  }
+
+  &:hover {
+    background-color: #29abe2;
+    box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.currentUserInitials {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}

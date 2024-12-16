@@ -1,0 +1,44 @@
+.legalNoticeText {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  max-height: calc(100vh - 96px);
+  padding-left: 80px;
+  padding-right: 80px;
+  overflow: auto;
+
+  .backArrow {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+
+    & img {
+      &:hover {
+        background-color: #eeeeee;
+        transform: scale(1.1);
+        border-radius: 60%;
+        cursor: pointer;
+      }
+    }
+  }
+
+  & h1 {
+    font-size: 30px;
+    margin-block: 10px;
+  }
+
+  & h2,
+  h3,
+  h4 {
+    font-size: 20px;
+    margin-block: 10px;
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .legalNoticeText {
+    height: calc(100dvh - 160px);
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}

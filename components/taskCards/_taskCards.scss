@@ -1,0 +1,30 @@
+.taskCards {
+  display: flex;
+  height: calc(100dvh - 304px);
+  padding-bottom: 16px;
+  overflow-y: auto;
+  max-width: 1208px;
+  padding-inline: 64px;
+  gap: 24px;
+
+  @media (max-width: $breakpoint-lg) {
+    flex-direction: column;
+    padding-inline: 8px;
+    height: calc(100dvh - 368px);
+    overflow: visible;
+  }
+
+  .todoCardsContainer,
+  .inProgressCardsContainer,
+  .awaitFeedbackCardsContainer,
+  .doneCardsContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+
+    @import "./menu.scss";
+
+    @import "./cards.scss";
+  }
+}

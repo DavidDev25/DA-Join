@@ -1,0 +1,54 @@
+.taskDetailView {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.1);
+
+  .taskDetailViewCardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 80%;
+    max-width: 525px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 32px 20px 32px 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+
+    .taskDetailViewCard {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+      width: 100%;
+      background-color: #ffffff;
+      padding: 0px 20px 20px 20px;
+      border-radius: 30px;
+      overflow: auto;
+
+      @import "./header.scss";
+
+      @import "./title.scss";
+
+      @import "./description.scss";
+
+      @import "./dueDate.scss";
+
+      @import "./priority.scss";
+
+      @import "./assignedTo.scss";
+
+      @import "./subtasks.scss";
+
+      @import "./buttons.scss";
+    }
+  }
+}

@@ -1,0 +1,584 @@
+.logInMainSection {
+  width: 100%;
+  min-height: 860px;
+  height: 100dvh;
+  max-height: 100dvh;
+  position: relative;
+  display: flex;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  @media (max-width: $breakpoint-lg) {
+  }
+}
+
+.logoAnimationDialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4000;
+  min-height: 860px;
+  height: 100dvh;
+  max-height: 100dvh;
+  width: 100%;
+  background-color: white;
+  transition: all 0.6s ease-in;
+  opacity: 1;
+
+  @media (max-width: $breakpoint-lg) {
+    background-color: #2a3647;
+  }
+}
+
+.joinLogoBox {
+  position: absolute;
+  z-index: 5000;
+  width: 100px;
+  height: 122px;
+  transform: translate(0, 0) scale(1);
+  top: 80px;
+  left: 77px;
+  transition: all 0.6s ease-in-out;
+
+  @media (max-width: $breakpoint-lg) {
+    width: 64px;
+    height: 78px;
+    top: 37px;
+    left: 38px;
+
+    // animation - straight, einmalig
+  }
+
+  @keyframes colorChangeJoinLogo {
+    0% {
+      fill: white;
+    }
+
+    58% {
+      fill: white;
+    }
+
+    80% {
+      fill: #2a3647;
+    }
+
+    100% {
+      fill: #2a3647;
+    }
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: $breakpoint-lg) {
+      path:nth-of-type(1) {
+        animation: colorChangeJoinLogo 1.4s linear forwards;
+      }
+      path:nth-of-type(2) {
+        animation: colorChangeJoinLogo 1.4s linear forwards;
+      }
+      path:nth-of-type(4) {
+        animation: colorChangeJoinLogo 1.4s linear forwards;
+      }
+      path:nth-of-type(5) {
+        animation: colorChangeJoinLogo 1.4s linear forwards;
+      }
+      path:nth-of-type(6) {
+        animation: colorChangeJoinLogo 1.4s linear forwards;
+      }
+    }
+  }
+}
+
+.joinLogoAnimation {
+  top: 50dvh;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2.7);
+}
+
+.linkToSignUpBox {
+  position: absolute;
+  bottom: calc(100dvh - 147px);
+  right: 122px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  @media (max-width: $breakpoint-lg) {
+    bottom: 99px;
+    right: 50%;
+    transform: translate(50%);
+  }
+
+  p {
+    font-size: 20px;
+    @media (max-width: $breakpoint-lg) {
+      text-wrap: nowrap;
+    }
+  }
+
+  button {
+    height: 48px;
+    padding: 15px 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: #2a3647;
+    font-size: 21px;
+    line-height: 1;
+    font-weight: 700;
+    color: white;
+    transition: all 0.1s ease-in-out;
+
+    @media (max-width: $breakpoint-lg) {
+      font-size: 16px;
+      width: 104px;
+      text-wrap: nowrap;
+    }
+
+    &:hover {
+      background-color: #29abe2;
+      box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+.signUpDialogField {
+  position: absolute;
+  z-index: 500;
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.15);
+
+  .signUpUserFeedback {
+    background-color: #2a3647;
+    position: absolute;
+    padding: 25px;
+    border-radius: 20px;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+    left: 50%;
+    bottom: -80px;
+    transform: translate(-50%, 0px);
+    transition: all 0.4s ease-out;
+
+    &.translateSignUpFeedback {
+      transform: translate(-50%, calc(-50dvh - 80px));
+    }
+
+    p {
+      color: white;
+      line-height: 24px;
+      font-size: 20px;
+    }
+  }
+}
+
+.logInRenderContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (max-width: $breakpoint-lg) {
+    max-width: 396px;
+    width: calc(100% - 16px);
+    margin-right: 8px;
+    margin-left: 8px;
+    transform: translate(calc(-50% - 8px), -50%);
+  }
+
+  .logInTemplate {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 48px 115px;
+    border-radius: 30px;
+    position: relative;
+
+    @media (max-width: $breakpoint-lg) {
+      padding: 32px 16px;
+    }
+
+    .backArrow {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: 48px;
+      top: 64px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50vh;
+      transition: all 0.12s ease-in-out;
+      cursor: pointer;
+
+      @media (max-width: $breakpoint-lg) {
+        left: 29px;
+        top: 46px;
+      }
+
+      &:hover {
+        background-color: #0c2e621f;
+      }
+
+      svg {
+        width: 32px;
+        height: 32px;
+        fill: #29abe2;
+      }
+    }
+
+    .logInTextBox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+
+      p {
+        font-size: 61px;
+        font-weight: 700;
+
+        @media (max-width: $breakpoint-lg) {
+          font-size: 47px;
+        }
+      }
+
+      .blueUnderlineDiv {
+        width: 150px;
+        height: 3px;
+        background-color: #29abe2;
+        border-radius: 50vh;
+        @media (max-width: $breakpoint-lg) {
+          width: 88px;
+        }
+      }
+    }
+
+    .logInInputArea {
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: $breakpoint-lg) {
+        width: 100%;
+        max-width: 364px;
+      }
+
+      input {
+        width: 422px;
+        border: 1px solid #d1d1d1;
+        border-radius: 10px;
+        padding: 13px 21px;
+        font-size: 20px;
+        background-position: 95%;
+        background-repeat: no-repeat;
+
+        @media (max-width: $breakpoint-lg) {
+          width: 100%;
+        }
+
+        &::placeholder {
+          color: #d1d1d1;
+          height: 24px;
+        }
+      }
+
+      .inputEmail {
+        background-image: url("../assets/icons/inputEmail.svg");
+        margin-bottom: 32px;
+
+        &:-webkit-autofill {
+          -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+          transition: background-color 5000s ease-in-out 0s;
+        }
+
+        &:focus {
+          border: 1px solid #29abe2;
+          outline: none;
+        }
+      }
+
+      .inputPassword {
+        background-image: url("../assets/icons/password.svg");
+        &:focus {
+          border: 1px solid #29abe2;
+          outline: none;
+        }
+      }
+
+      .checkToRememberBox {
+        display: flex;
+        gap: 8px;
+        padding-left: 42px;
+        padding-top: 48px;
+        align-items: center;
+
+        @media (max-width: $breakpoint-lg) {
+          padding-left: 16px;
+        }
+
+        input[type="checkbox"] {
+          appearance: none;
+          width: 20px;
+          height: 20px;
+          padding: 0;
+          border: 1px solid #d1d1d1;
+          border-radius: 4px;
+          cursor: pointer;
+          position: relative;
+
+          &:checked {
+            background-color: #29abe2;
+            border-color: #29abe2;
+
+            &::after {
+              content: "✔";
+              color: white;
+              font-size: 16px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .signUpInputArea {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+
+      @media (max-width: $breakpoint-lg) {
+        width: 100%;
+      }
+
+      input {
+        width: 422px;
+        border: 1px solid #d1d1d1;
+        border-radius: 10px;
+        padding: 13px 21px;
+        font-size: 20px;
+        background-position: 95%;
+        background-repeat: no-repeat;
+
+        @media (max-width: $breakpoint-lg) {
+          width: 100%;
+          max-width: 364px;
+        }
+
+        &::placeholder {
+          color: #d1d1d1;
+          height: 24px;
+        }
+      }
+
+      .inputName {
+        background-image: url("../assets/icons/inputName.svg");
+        &:focus {
+          border: 1px solid #29abe2;
+          outline: none;
+        }
+      }
+
+      .inputEmail {
+        background-image: url("../assets/icons/inputEmail.svg");
+        &:focus {
+          border: 1px solid #29abe2;
+          outline: none;
+        }
+      }
+
+      .inputPassword {
+        background-image: url("../assets/icons/password.svg");
+        &:focus {
+          border: 1px solid #29abe2;
+          outline: none;
+        }
+      }
+
+      .checkToRememberContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: $breakpoint-lg) {
+          padding-top: 32px;
+        }
+
+        .checkToRememberBox {
+          display: flex;
+          font-size: 16px;
+          gap: 8px;
+          align-items: center;
+
+          .checkboxRememberMe {
+            width: 16px;
+            height: 16px;
+          }
+
+          p {
+            font-size: 16px;
+            color: #d1d1d1;
+          }
+
+          a {
+            color: #29abe2;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .logInBtnBox {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+
+      @media (max-width: $breakpoint-lg) {
+        flex-direction: column;
+        gap: 21px;
+      }
+
+      .logInBtn {
+        height: 48px;
+        padding: 15px 24px;
+        border: none;
+        border-radius: 10px;
+        background-color: #2a3647;
+        font-size: 21px;
+        line-height: 1;
+        font-weight: 700;
+        color: white;
+        transition: all 0.1s ease-in-out;
+
+        @media (max-width: $breakpoint-lg) {
+          height: 51px;
+          width: 180px;
+        }
+
+        &:hover {
+          background-color: #29abe2;
+          box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+        }
+
+        &.buttonDisabled {
+          cursor: default;
+          background-color: grey;
+          &:hover {
+            box-shadow: none;
+            background-color: grey;
+          }
+        }
+      }
+
+      .signUpBtn {
+        height: 55px;
+        padding: 15px 24px;
+        border: none;
+        border-radius: 10px;
+        background-color: #2a3647;
+        font-size: 21px;
+        line-height: 25px;
+        font-weight: 700;
+        color: white;
+        transition: all 0.1s ease-in-out;
+
+        @media (max-width: $breakpoint-lg) {
+          height: 51px;
+          width: 180px;
+          font-size: 16px;
+        }
+
+        &:hover {
+          background-color: #29abe2;
+          box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+        }
+
+        &.buttonDisabled {
+          cursor: default;
+          background-color: grey;
+          &:hover {
+            box-shadow: none;
+            background-color: grey;
+          }
+        }
+      }
+
+      .guestLogInBtn {
+        height: 48px;
+        padding: 15px 24px;
+        border-radius: 10px;
+        border: 1px solid #2a3647;
+        background-color: white;
+        font-size: 21px;
+        line-height: 1;
+        font-weight: 700;
+        color: #2a3647;
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+          border: 1px solid #29abe2;
+          color: #29abe2;
+          box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+  }
+}
+
+.privacyContainer {
+  display: flex;
+  width: 230px;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  a {
+    color: #d1d1d1;
+    font-size: 16px;
+
+    &:hover {
+      color: #29abe2;
+      font-weight: 700;
+    }
+  }
+}
+
+#privacyPolicyCheckBox[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+
+  &:checked {
+    background-color: #29abe2;
+    border-color: #29abe2;
+
+    &::after {
+      content: "✔";
+      color: white;
+      font-size: 16px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
